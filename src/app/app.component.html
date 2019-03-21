@@ -8,3 +8,20 @@
   <input type="number" id="manual-val" [(ngModel)]="manualVal">
   <button type="button" (click)="setValueForcibly()">강제 저장</button>
 </div>
+
+<hr>
+
+<h3>구조 지시자 NgIf 지시자</h3>
+
+<div>
+	<button type="button" (click)="isShow = !isShow">전환</button>
+	<label *ngIf="isShow; else hiding">You are special!</label>
+	<ng-template #hiding>
+		<label>I'm so depressed</label>
+	</ng-template>
+</div>
+
+<div *ngIf="member">
+	<p>Name : {{member.name}}</p>
+	<p>Email : {{member.email}}</p>
+</div>

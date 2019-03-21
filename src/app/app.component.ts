@@ -10,6 +10,11 @@ export class AppComponent {
   manualVal = 0;
   static LIMIT_CNT = 100;
 
+  member = {
+  	name:"blues",
+  	email:"doe@gmail.com"
+  };
+
   colorByValue() {
   	if (this.curVal > 0) return 'green';
   	else if (this.curVal <0) return 'red';
