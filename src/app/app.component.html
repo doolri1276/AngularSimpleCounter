@@ -37,3 +37,12 @@
 <ul>
 	<li *ngFor="let animal of animals; let idx = index">{{ idx }} {{animal}}</li>
 </ul>
+
+<h3>NgSwitch 지시자</h3>
+
+<span [ngSwitch]="animal">
+	<ng-container *ngSwitchCase="'dog'">멍멍</ng-container>
+	<ng-container *ngSwitchCase="'cat'">야옹</ng-container>
+	<ng-container *ngSwitchCase="'pig'">돼지</ng-container>
+	<ng-container *ngSwitchDefault>에헴!</ng-container>
+</span>

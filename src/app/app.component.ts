@@ -19,6 +19,8 @@ export class AppComponent {
   	'dog', 'cat','pig'
   ];
 
+  animal='cat';
+
   colorByValue() {
   	if (this.curVal > 0) return 'green';
   	else if (this.curVal <0) return 'red';
@@ -55,4 +57,6 @@ export class AppComponent {
   	alert(`더 이상 ${target}시킬 수 없습니다.`);
   	return false;
   }
+
+
 }
