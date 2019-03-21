@@ -15,6 +15,10 @@ export class AppComponent {
   	email:"doe@gmail.com"
   };
 
+  animals = [
+  	'dog', 'cat','pig'
+  ];
+
   colorByValue() {
   	if (this.curVal > 0) return 'green';
   	else if (this.curVal <0) return 'red';

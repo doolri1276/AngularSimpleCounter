@@ -11,7 +11,11 @@
 
 <hr>
 
-<h3>구조 지시자 NgIf 지시자</h3>
+<h2>구조 지시자</h2>
+
+<hr>
+
+<h3>NgIf 지시자</h3>
 
 <div>
 	<button type="button" (click)="isShow = !isShow">전환</button>
@@ -25,3 +29,11 @@
 	<p>Name : {{member.name}}</p>
 	<p>Email : {{member.email}}</p>
 </div>
+
+<hr>
+
+<h3>NgFor 지시자</h3>
+
+<ul>
+	<li *ngFor="let animal of animals; let idx = index">{{ idx }} {{animal}}</li>
+</ul>
