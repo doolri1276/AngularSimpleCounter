@@ -58,5 +58,46 @@ export class AppComponent {
   	return false;
   }
 
+  ////// 속성 지시자 //////
+
+  //[class.my-class]
+  isMyClass='0';
+
+
+
+
+
+  //[ngClass]
+  //각 키가 클래스 명이고 각 키의 값이 참인 경우에만 클래스 속성을 반영한다.
+  myObj={
+	  'test-class': true, //클래스 적용됨
+	  'your-class': 0,    //클래스 미적용됨 ( false 거나 0 일때 미적용 )
+	  'test': true        //클래스 적용됨
+  };
+
+
+
+
+
+  //[ngStyle]
+
+  //이런식으로 속성값을 지정하여 동적으로 변경이 가능하다.
+  boilable=1;
+  edible=false;
+
+  styleConf= {
+	  color: this.boilable ? 'green': 'purple',
+	  'font-weight': this.edible ? 'bold': 'normal'
+  };
+
+
+
+
+
+  ///// 파이프 /////
+  
+  //ng g pipe 파이프명    하면 파이프 생성 가능
+  myName="hohoho"
+
 
 }

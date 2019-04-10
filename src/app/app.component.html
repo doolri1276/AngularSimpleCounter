@@ -38,6 +38,8 @@
 	<li *ngFor="let animal of animals; let idx = index">{{ idx }} {{animal}}</li>
 </ul>
 
+<hr>
+
 <h3>NgSwitch 지시자</h3>
 
 <span [ngSwitch]="animal">
@@ -46,3 +48,22 @@
 	<ng-container *ngSwitchCase="'pig'">돼지</ng-container>
 	<ng-container *ngSwitchDefault>에헴!</ng-container>
 </span>
+
+<hr>
+<h2>속성 지시자</h2>
+
+<div [class.my-class]="isMyClass">앵귤러 속성 지시자</div>
+<p>
+	[class.my-class]="isMyClass" ts파일의 isMyClass가 false나 0이 아니면 my-class클래스 속성을 사용하는것이다. <br>
+	그런데 이것으로는 하나의 class만 지정할 수 있다.
+</p>
+
+<div [ngClass]="myObj">앵귤러 NgClass 속성 지시자</div>
+
+<p [ngStyle]="styleConf">NgStyle</p>
+
+<hr>
+
+<h1>파이프</h1>
+
+<p name="member-name">{{ myName | uppercase | honor }}</p>

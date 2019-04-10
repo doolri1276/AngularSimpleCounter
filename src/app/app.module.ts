@@ -4,10 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HonorPipePipe } from './honor-pipe.pipe';
+import { GeekMarkerPipePipe } from './geek-marker-pipe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HonorPipePipe,
+    GeekMarkerPipePipe
   ],
   imports: [
     BrowserModule,
